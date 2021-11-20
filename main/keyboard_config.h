@@ -28,7 +28,7 @@
 //Define matrix
 #define KEYPADS 1 // intended in order to create a Multiple keypad split boards
 #define MATRIX_ROWS 5
-#define MATRIX_COLS 12 // For split keyboards, define columns for one side only.
+#define MATRIX_COLS 14 // For split keyboards, define columns for one side only.
 
 #define NKRO // does not work on Android and iOS!,  we can get 18KRO on those
 #define LAYERS 3 // number of layers defined
@@ -47,7 +47,7 @@
 #define ENCODER_S_PIN GPIO_NUM_39// encoder switch pin
 
 //OLED Parameters
-#define OLED_ENABLE //undefine if no oled is used
+// #define OLED_ENABLE //undefine if no oled is used
 #define ROTATION LANDSCAPE
 #define OLED_SDA_PIN GPIO_NUM_21
 #define OLED_SCL_PIN GPIO_NUM_22
@@ -56,7 +56,7 @@
  * Please read check battery_monitor.h for resistor values before applying
  * use ADC1 only,  */
 
-#define BATT_STAT //define to enable battery monitoring
+// #define BATT_STAT //define to enable battery monitoring
 #define BATT_PIN ADC1_CHANNEL_7 //gpio pin 35, refer to the esp32 before modifying
 
 //deep sleep parameters, mind that reconnecting after deep sleep might take a minute or two

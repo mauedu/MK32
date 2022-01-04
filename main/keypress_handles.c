@@ -162,10 +162,13 @@ uint8_t matrix_prev_state[MATRIX_ROWS][MATRIX_COLS] = { 0 };
 // checking the state of each key in the matrix
 uint8_t *check_key_state(uint16_t **keymap) {
 
+//  Scan the matrix and save any changes in MATRIX_STATE[row][col]
 	scan_matrix();
 	for (uint8_t pad = 0; pad < KEYPADS; pad++) {
 
 		uint8_t matrix_state[MATRIX_ROWS][MATRIX_COLS] = { 0 };
+		
+		// matrix_states contains MATRIX_STATE (from matrix.c)
 		memcpy(matrix_state, matrix_states[pad], sizeof(matrix_state));
 
 		for (uint8_t col = (MATRIX_COLS * pad); col < ((pad + 1) * (MATRIX_COLS)); col++) {
